@@ -110,7 +110,7 @@ const App: React.FC = () => {
     setSource(uniqueCards.map((card) => [card.top, card.bottom]));
   };
 
-  const handleRemoveByInput = () => {
+  const RemoveByInput = () => {
     if (inputValue === "") return;
 
     const num = Number(inputValue);
@@ -123,7 +123,7 @@ const App: React.FC = () => {
     setInputValue("");
   };
 
-  const handleReset = () => {
+  const Reset = () => {
     setCards(initialData);
     setSource(initialData.map(({ top, bottom }) => [top, bottom]));
     setInputValue("");
@@ -163,7 +163,7 @@ const App: React.FC = () => {
           max={7}
         />
         <button
-          onClick={handleRemoveByInput}
+          onClick={RemoveByInput}
           className="px-1 bg-gray-700 font-bold text-gray-200 rounded text-sm shadow-lg hover:scale-110"
         >
           remove
@@ -194,7 +194,7 @@ const App: React.FC = () => {
           RemoveDup
         </button>
         <button
-          onClick={handleReset}
+          onClick={Reset}
           className="p-2 bg-purple-300 font-bold text-gray-800 rounded shadow-lg border-gray-200 hover:scale-110"
         >
           Reset
